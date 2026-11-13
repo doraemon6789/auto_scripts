@@ -2,7 +2,7 @@ name: 🔄 Zampto Auto Renew-matins
 
 on:
   schedule:
-    - cron: '15 7 * * *'
+    - cron: '15 1 * * *'
   workflow_dispatch:
 
 permissions:

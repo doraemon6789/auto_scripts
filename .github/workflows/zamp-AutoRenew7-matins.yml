@@ -26,6 +26,9 @@ jobs:
       SCREENSHOT_DIR: screenshots
       PROJECT_DIR: zampto
       PRIVATE_REPO: doraemon6789/auto_zampto_private
+      # hCaptcha NoneCap 第三方求解直发通道（demo 移植；未配 key 自动跳过走旧 UI 流）
+      HC_MODE: ${{ vars.HC_MODE || 'nc' }}
+      NONECAP_API_KEY: ${{ secrets.NONECAP_API_KEY }}
 
     steps:
       - name: 检出公开仓库
@@ -63,6 +66,8 @@ jobs:
           # reCAPTCHA 语音挑战：识别 + 静态 ffmpeg（不装 apt 那一大坨）
           # audioop 在 Python 3.11 里还在标准库，audioop-lts 只给 3.13+ 用，别装
           pip install 'SpeechRecognition>=3.17.0' 'imageio-ffmpeg>=0.5,<1'
+          # NoneCap 通道依赖（hcaptcha token 第三方求解 + HTTP/2）
+          pip install 'httpx[http2]>=0.27.0'
 
       - name: 安装代理
         working-directory: ${{ github.repository_owner }}-${{ github.event.repository.name }}-${{ env.PROJECT_DIR }}

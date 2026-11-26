@@ -41,6 +41,8 @@ HY2_PROXY_URL='hysteria2://[auth]@[host]:[port]/?sni=xxx&insecure=1&alpn=h3'
 ```
 SOCKS_PORT='51080'
 ```
+- NONECAP_API_KEY （hCaptcha 第三方求解 key；**注册地址 <https://dashboard.nonecap.com/overview>**，登录后到后台 API keys 页生成；不配则走旧 UI 流）
+
 ### 仅在设置了 HY2_PROXY_URL 时生效
 
 

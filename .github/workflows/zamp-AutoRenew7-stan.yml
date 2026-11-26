@@ -45,6 +45,7 @@ jobs:
       ZAMPTO_VISION_BASE: https://ma.dora.cc.cd/v1
       ZAMPTO_VISION_MODEL: wb1-sg/cn:glm-5.2
       # hCaptcha NoneCap 第三方求解直发通道（demo 移植；未配 key 自动跳过走旧 UI 流）
+      # NoneCap 注册地址 https://dashboard.nonecap.com/overview → 登录后到 API keys 页生成 key
       HC_MODE: ${{ vars.HC_MODE || 'nc' }}
       NONECAP_API_KEY: ${{ secrets.NONECAP_API_KEY }}
 

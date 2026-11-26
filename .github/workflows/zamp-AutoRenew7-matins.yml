@@ -41,6 +41,7 @@ jobs:
       PROJECT_DIR: zampto
       PRIVATE_REPO: doraemon6789/auto_zampto_private
       # hCaptcha NoneCap 第三方求解直发通道（demo 移植；未配 key 自动跳过走旧 UI 流）
+      # NoneCap 注册地址 https://dashboard.nonecap.com/overview → 登录后到 API keys 页生成 key
       HC_MODE: ${{ vars.HC_MODE || 'nc' }}
       NONECAP_API_KEY: ${{ secrets.NONECAP_API_KEY }}
 

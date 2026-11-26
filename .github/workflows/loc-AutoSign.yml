@@ -97,6 +97,7 @@ jobs:
           LOC_BATCH: ${{ secrets.LOC_BATCH }}
 
           # 人机验证打码：NoneCap（key 和本仓库其它脚本共用，配这一个就够）
+          # NoneCap 注册地址 https://dashboard.nonecap.com/overview → 登录后到 API keys 页生成 key
           NONECAP_API_KEY: ${{ secrets.NONECAP_API_KEY }}
           NONECAP_BASE_URL: https://api.nonecap.com/v1
 
